@@ -1,0 +1,30 @@
+-- wyd here bro?.. since u already here, 
+local env = getgenv()
+env.IXURT_HUB_READY = false
+
+local function run(url)
+    local source = game:HttpGet(url)
+    return assert(loadstring(source))()
+end
+
+local step1 = "https://raw.githubusercontent.com/ixurtalt/IXURTHUB/refs/heads/main/STEP%201"
+local hub = "https://api.luarmor.net/files/v4/loaders/3721d8db5cc47c6c1726f445338ee8a3.lua"
+local step2 = "https://raw.githubusercontent.com/ixurtalt/IXURTHUB/refs/heads/main/STEP%202"
+
+if not pcall(run, step1) then
+    return
+end
+
+local failed = false
+
+task.spawn(function()
+    failed = not pcall(run, hub)
+end)
+
+local timeout = os.clock() + 30
+
+repeat
+    task.wait(0.25)
+until env.IXURT_HUB_READY or failed or os.clock() >= timeout
+
+pcall(run, step2)
