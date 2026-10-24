@@ -1,3 +1,6 @@
+-- bro what u doing here?... go on bout ur day
+
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ixurtalt/IXURTHUB/refs/heads/main/STEP%201"))()
 
 wait(.5)
