@@ -1,12 +1,1 @@
--- bro what u doing here?... go on bout ur day
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ixurtalt/IXURTHUB/refs/heads/main/STEP%201"))()
-
-wait(.5)
-
 loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/55e78cc273fd4b6089b11b7bfb22179e.lua"))()
-
-wait(.5)
-
-wait(loadstring(game:HttpGet("https://raw.githubusercontent.com/ixurtalt/IXURTHUB/refs/heads/main/STEP%202"))()
